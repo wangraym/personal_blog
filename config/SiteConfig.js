@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'Minimal Blog', // Navigation and Site Title
+  siteTitle: 'IoT Ray\'s Blog', // Navigation and Site Title
   siteTitleAlt: 'Minimal Blog - Gatsby Starter', // Alternative Site title for SEO
   siteUrl: 'https://minimal-blog.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
@@ -15,8 +15,8 @@ module.exports = {
 
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/
-  themeColor: '#3498DB',
-  backgroundColor: '#2b2e3c',
+  themeColor: '#20B2AA',
+  backgroundColor: '#20B2AA',
 
   // Settings for typography.js
   headerFontFamily: 'Bitter',

@@ -44,15 +44,14 @@ const Content = styled.div`
 const Contact = () => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <Helmet title={`About Me | ${config.siteTitle}`} />
       <Header>
         <Link to="/">{config.siteTitle}</Link>
       </Header>
       <Content>
-        <h1>Contact</h1>
-        <p>Feel free to reach me by email at <mark style={{ color: `black`, background: 'white', fontWeight: '900'}}>wang.riv@gmail.com</mark>, or on <a style={{ color: `teal` }} href="https://www.Linkedin.com/in/wangraym">LinkedIn</a></p>
+        <h1>About Me</h1>
         <p>
-          And also feel free to check out my <a style={{ color: `teal` }} href="https://www.github.com/wangraym">Github</a>, where a lot of the stuff I talk about here is saved
+            Text About Me
         </p>
       </Content>
     </Wrapper>

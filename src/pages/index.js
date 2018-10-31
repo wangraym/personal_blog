@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import { Layout, Article, Wrapper, Button, SectionTitle } from 'components';
 import { media } from '../utils/media';
+import logo from "../../images/gitpic.jpg"
 
 const Content = styled.div`
   grid-column: 2;
@@ -45,15 +46,23 @@ const IndexPage = ({
   <Layout>
     <Wrapper>
       <Hero>
-        <h1>Welcome to my blog!</h1>
-        
+        <h1>Welcome!</h1>
         <p>
-          I&apos;m Raymond Wang, a recent grad of the University of Toronto in Mechanical engineering with a minor in Robotics
+          I&apos;m Raymond, a recent grad of the University of Toronto in Mechanical engineering with a minor in Robotics
         </p>
+        <img src={logo} />
         <p>
           I&apos;m now using my engineering skills and my love for coding to explore the world of IoT software development and 
           Deep Learning. Join me in this blog, as I document some of the things I learn and create!
         </p>
+        <Link to="/about">
+          <Button big>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
+							<path d="M 8.749 9.934 c 0 0.247 -0.202 0.449 -0.449 0.449 H 4.257 c -0.247 0 -0.449 -0.202 -0.449 -0.449 S 4.01 9.484 4.257 9.484 H 8.3 C 8.547 9.484 8.749 9.687 8.749 9.934 M 7.402 12.627 H 4.257 c -0.247 0 -0.449 0.202 -0.449 0.449 s 0.202 0.449 0.449 0.449 h 3.145 c 0.247 0 0.449 -0.202 0.449 -0.449 S 7.648 12.627 7.402 12.627 M 8.3 6.339 H 4.257 c -0.247 0 -0.449 0.202 -0.449 0.449 c 0 0.247 0.202 0.449 0.449 0.449 H 8.3 c 0.247 0 0.449 -0.202 0.449 -0.449 C 8.749 6.541 8.547 6.339 8.3 6.339 M 18.631 4.543 v 10.78 c 0 0.248 -0.202 0.45 -0.449 0.45 H 2.011 c -0.247 0 -0.449 -0.202 -0.449 -0.45 V 4.543 c 0 -0.247 0.202 -0.449 0.449 -0.449 h 16.17 C 18.429 4.094 18.631 4.296 18.631 4.543 M 17.732 4.993 H 2.46 v 9.882 h 15.272 V 4.993 Z M 16.371 13.078 c 0 0.247 -0.202 0.449 -0.449 0.449 H 9.646 c -0.247 0 -0.449 -0.202 -0.449 -0.449 c 0 -1.479 0.883 -2.747 2.162 -3.299 c -0.434 -0.418 -0.714 -1.008 -0.714 -1.642 c 0 -1.197 0.997 -2.246 2.133 -2.246 s 2.134 1.049 2.134 2.246 c 0 0.634 -0.28 1.224 -0.714 1.642 C 15.475 10.331 16.371 11.6 16.371 13.078 M 11.542 8.137 c 0 0.622 0.539 1.348 1.235 1.348 s 1.235 -0.726 1.235 -1.348 c 0 -0.622 -0.539 -1.348 -1.235 -1.348 S 11.542 7.515 11.542 8.137 M 15.435 12.629 c -0.214 -1.273 -1.323 -2.246 -2.657 -2.246 s -2.431 0.973 -2.644 2.246 H 15.435 Z" ></path>
+						</svg>
+            Me
+          </Button>
+        </Link>
         <Link to="/categories">
           <Button big>
             <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon" viewBox="0 0 20 20">
@@ -101,7 +110,7 @@ IndexPage.propTypes = {
 
 export const IndexQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC  }) {
       edges {
         node {
           fields {

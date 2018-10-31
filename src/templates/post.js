@@ -76,6 +76,7 @@ Post.propTypes = {
 
 Post.defaultProps = {
   pageContext: PropTypes.shape({
+    slug: null,
     next: null,
     prev: null,
   }),
