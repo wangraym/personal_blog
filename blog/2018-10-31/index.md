@@ -3,7 +3,6 @@ date: "2018-10-31"
 title: "Building my first Alexa skill - City Services"
 category: "Coding"
 ---
-
 This post is just a quick overview of the first Alexa skill I built. It was far from perfect, but I think it was a good experience and I think it's good to reflect on the work you've done to see what you really ended up with.
 
 ## Getting started
@@ -16,14 +15,14 @@ The city services skill allows users to query a service directory for available 
 
 
 <p align="center">
-  <img src="https://github.com/wangraym/personal_blog/blob/master/images/services_sent.png">
+  <img src="https://raw.githubusercontent.com/wangraym/personal_blog/master/images/services_sent.png"><br/>
   Figure 1 - Chatting with Alexa City Services
 </p>
 
 Based on their answer AWS SNS (Simple Notification Service) is used to send a notification to the services requested. This can be an SMS or an email, and it contains an automated message telling the business that a user need their service. The message contains the user's full name and phone number (by which the business is expected to use to get in touch with the user). Permission for the user's full name and phone number is prompted for right when the user launches the skill. The user needs to enable permissions once on their Alexa app before any businesses will be contacted. If permissions aren't granted, the skill will be unable to retrieve the user's contact information, the request will fail, and the user will be notified and asked to enable permissions and start again.
 
 <p align="center">
-  <img src="https://github.com/wangraym/personal_blog/blob/master/images/services_email.png">
+  <img src="https://raw.githubusercontent.com/wangraym/personal_blog/master/images/services_email.png"><br/>
   Figure 2 - Email Notification from Alexa City Services
 </p>
 
@@ -31,7 +30,7 @@ Based on their answer AWS SNS (Simple Notification Service) is used to send a no
 I used an all Amazon architecture for this because it's free for me right now on AWS free tier, and because it's easy to integrate all of their services together. The figure below shows how my skill is laid out.
 
 <p align="center">
-    <img src=https://github.com/wangraym/personal_blog/blob/master/images/services_flow.png)>
+    <img src="https://raw.githubusercontent.com/wangraym/personal_blog/master/images/services_flow.png")><br/>
     Figure 3 - Skill Architecture
 </p>
 
@@ -95,7 +94,7 @@ My skill maintains up to four different attributes: STATUS, QUERY, QUESTION, and
 Status handles the overall state of the skill. In regular operation, the state flow looks like this:
 
 <p align="center">
-    <img src=https://github.com/wangraym/personal_blog/blob/master/images/services_status.png)>
+    <img src="https://raw.githubusercontent.com/wangraym/personal_blog/master/images/services_status.png")><br/>
     Figure 4 - State Flow
 </p>
 

@@ -51,7 +51,7 @@ const Contact = () => (
       <Content>
         <h1>About Me</h1>
         <p>
-            Text About Me
+            Hi, I'm still not done this part yet!
         </p>
       </Content>
     </Wrapper>
